@@ -8,4 +8,4 @@ msrebirth:
       - STEAM_PASS=
       - STEAM_AUTH=
     volumes:
-      - /server:/home/msrebirth
+      - /opt/server:/home/msrebirth

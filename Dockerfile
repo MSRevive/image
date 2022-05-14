@@ -34,5 +34,5 @@ RUN chown -R root:root /server \
 
 # We want to overwrite the include hlds_run script with ours cause of file header.
 COPY ./files/hlds_run /server/
-ADD ./entrypoint.sh /server/
-ENTRYPOINT ["/server/entrypoint.sh"]
+ADD ./entrypoint.sh /
+ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]
