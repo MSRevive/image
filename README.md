@@ -10,6 +10,8 @@ STEAM_PASS='password'
 STEAM_AUTH='auth code'
 ```
 
+You can also use Docker Compose to simplify the starting the container process for yourself. An example one is located [here](https://github.com/MSRevive/image/blob/main/files/docker_compose.yaml)
+
 ## Usage
 ```
  $ docker run -d -v ~/msrebirth/:/server -p 27015/udp ghcr.io/msrevive/image:latest --env-file ~/env.list -insecure -game msrebirth -map edana +maxplayers 8 -port 27015 +exec crashed.cfg -strictportbind -norestart
