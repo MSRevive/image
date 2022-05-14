@@ -33,7 +33,6 @@ RUN chown -R root:root /server \
   # && cp -v ./linux32/steamclient.so ../.steam/sdk64/steamclient.so \
 
 # We want to overwrite the include hlds_run script with ours cause of file header.
-RUN chmod +x ./entrypoint.sh
 COPY ./files/hlds_run /server/
-COPY ./entrypoint.sh /
-ENTRYPOINT ["/entrypoint.sh"]
+ADD ./entrypoint.sh /server/
+ENTRYPOINT ["/server/entrypoint.sh"]
