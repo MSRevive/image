@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 cd /server
 sleep 1
 
