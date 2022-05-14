@@ -31,4 +31,4 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ghcr.io/msrebirth/image:${{ env.TAG }}  
+          tags: ghcr.io/msrevive/image:${{ env.TAG }}  
