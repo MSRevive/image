@@ -29,8 +29,8 @@ RUN mkdir -p /server/steamcmd \
 RUN chown -R root:root /server \
   && mkdir -p /server/.steam/sdk32 \
   && mkdir -p /server/.steam/sdk64 \
-  && cp -v ./linux32/steamclient.so ../.steam/sdk32/steamclient.so \
-  && cp -v ./linux32/steamclient.so ../.steam/sdk64/steamclient.so \
+  # && cp -v ./linux32/steamclient.so ../.steam/sdk32/steamclient.so \
+  # && cp -v ./linux32/steamclient.so ../.steam/sdk64/steamclient.so \
 
 # We want to overwrite the include hlds_run script with ours cause of file header.
 COPY ./files/hlds_run /server/
