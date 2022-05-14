@@ -12,7 +12,7 @@ STEAM_AUTH='auth code'
 
 ## Usage
 ```
- $ docker run -d -v ~/msrebirth/:/server -p 27015/udp linky/linky:latest --env-file ~/env.list -insecure -game msrebirth -map edana +maxplayers 8 -port 27015 +exec crashed.cfg -strictportbind -norestart
+ $ docker run -d -v ~/msrebirth/:/server -p 27015/udp ghcr.io/msrevive/image:latest --env-file ~/env.list -insecure -game msrebirth -map edana +maxplayers 8 -port 27015 +exec crashed.cfg -strictportbind -norestart
 ```
 
 ### Syntax
