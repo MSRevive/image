@@ -25,4 +25,4 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ghcr.io/${{ github.repository }}:${{ env.TAG }}  
+          tags: ghcr.io/msrebirth/image:${{ env.TAG }}  
