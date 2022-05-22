@@ -1,0 +1,2 @@
+# Nexus2 Docker Image
+This is the official Docker image to run a Nexus2 server. Currently this image only supports ``linux/amd64``, the chances of us adding Windows support is slim because none of us run Docker on Windows.

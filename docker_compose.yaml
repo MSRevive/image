@@ -1,11 +1,16 @@
 msrebirth:
-    image: ghcr.io/msrevive/msrebirth:latest
-    ports:
-      - 27016:27016/tcp
-      - 27016:27016/udp
-    environment:
-      - STEAM_USER=anonymous
-      - STEAM_PASS=
-      - STEAM_AUTH=
-    volumes:
-      - /opt/server:/home/msrebirth
+  image: ghcr.io/msrevive/msrebirth:latest
+  ports:
+    - 27016:27016/tcp
+    - 27016:27016/udp
+  environment:
+    - STEAM_USER=anonymous
+    - STEAM_PASS=
+    - STEAM_AUTH=
+  volumes:
+    - /opt/server:/home/msrebirth
+nexus2:
+  image: ghcr.io/msrevive/nexus2:latest
+  ports:
+    - 1337:1337/tcp
+    
