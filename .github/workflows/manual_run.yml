@@ -7,12 +7,14 @@ on:
   workflow_dispatch:
     
 jobs:
-  matrix:
-    img:
-      - {name: "msrebirth"}
-      - {name: "nexus2"}
+  runs-on: ubuntu-latest
   build:
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        img:
+          - {name: "msrebirth"}
+          - {name: "nexus2"}
     steps:
       - name: checkout code
         uses: actions/checkout@v2
