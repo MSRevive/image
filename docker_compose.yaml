@@ -1,5 +1,5 @@
 msrebirth:
-    image: ghcr.io/msrevive/image:latest
+    image: ghcr.io/msrevive/msrebirth:latest
     ports:
       - 27016:27016/tcp
       - 27016:27016/udp

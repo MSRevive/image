@@ -1,4 +1,4 @@
-name: manual run
+name: build images
 
 on:
   push:
@@ -7,6 +7,10 @@ on:
   workflow_dispatch:
     
 jobs:
+  matrix:
+    img:
+      - {name: "msrebirth"}
+      - {name: "nexus2"}
   build:
     runs-on: ubuntu-latest
     steps:
@@ -34,7 +38,7 @@ jobs:
       - name: build & push
         uses: docker/build-push-action@v2
         with:
-          context: ./
-          file: ./Dockerfile
+          context: ./${{ matrix.img.name }}
+          file: ./${{ matrix.img.name }}/Dockerfile
           push: true
-          tags: ghcr.io/msrevive/image:${{ env.TAG }}  
+          tags: ghcr.io/msrevive/${{ matrix.img.name }}:${{ env.TAG }}  
